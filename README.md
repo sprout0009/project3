@@ -33,3 +33,5 @@ You can use the starter code rsh.c to complete the project. A Makefile is also p
 
 **Useful tips:**
  - You can use fgets() to get a line of input from the rsh prompt. Note that, fgets() also retains the end of line character at the end of the string. You can get rid of that by simply line[strlen(line)-1]='\0'.
+ - You need to create and argument vector (argv in the sample program myspawn.c) to be passed to the posix_spawn() call. That argument vector is an array of strings terminated with a NULL pointer, which are basically the individual strings that the user enters from the command prompt separated by space. For example, if the user enters "mkdir a b c d", argv should be {"mkdir","a","b","c","d",NULL}. If you want to dynamically resize the argv array while parsing the input, you can use the realloc() function to do so.
+ - strtok() destroys/modifies the original string as it tokenizes it. If you want to restart strtok() a second time on the same string from the beginning, you should first make a separate copy of that string before running strtok() the first time and start strtok() on the copied string the second time. 
