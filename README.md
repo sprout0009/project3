@@ -21,6 +21,15 @@ The help command should print the list of commands as their appear above. The fi
 
 When the program is run, the shell prompt "rsh>" should be displayed. The shell should be in an infinite loop until the command **exit** is entered at which point the shell program should be terminated with a "return 0".
 
+If the user enters any command or try to execute any program, you should display the following message and return to the prompt:
+
+NOT ALLOWED!
+
+Similar to project2, a sample executable is provided for convenience in the solution_executable folder.
+
 You are not expected to support background processes, piping, or input/output redirection in this project.
 
 You can use the starter code rsh.c to complete the project. A Makefile is also provided for convenience.
+
+**Useful tips:**
+ - You can use fgets() to get a line of input from the rsh prompt. Note that, fgets() also retains the end of line character at the end of the string. You can get rid of that by simply line[strlen(line)-1]='\0'.
