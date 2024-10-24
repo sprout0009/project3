@@ -28,7 +28,7 @@ int main() {
 
     while (1) {
 
-	printf("rsh>");
+	fprintf(stderr,"rsh>");
 
 	if (fgets(line,256,stdin)==NULL) continue;
 
