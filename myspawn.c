@@ -19,7 +19,7 @@ int main() {
     // posix_spawnattr_setflags(&attr, POSIX_SPAWN_SETSCHEDULER);
 
     // Spawn a new process
-    if (posix_spawn(&pid, "/bin/echo", NULL, &attr, argv, environ) != 0) {
+    if (posix_spawnp(&pid, "echo", NULL, &attr, argv, environ) != 0) {
         perror("spawn failed");
         exit(EXIT_FAILURE);
     }

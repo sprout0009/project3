@@ -38,7 +38,7 @@ int main() {
 
 	// TODO
 	// Add code to spawn processes for the first 9 commands
-	// Add code to execute cd, exit, help commands
+	// And add code to execute cd, exit, help commands
 	// Use the example provided in myspawn.c
 
     }
