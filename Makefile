@@ -7,4 +7,4 @@ myspawn: myspawn.c
 @PHONY: clean
 
 clean:
-	rm rsh
+	rm -f rsh
