@@ -73,7 +73,7 @@ int main() {
         } else if(strcmp(argv[0],"help") == 0) {
             printf("The allowed commands are:\n");
             for (int i = 0; i < N; i++) {
-                printf("%d: ", i);
+                printf("%d: ", i+1);
                 printf("%s\n", allowed[i]);
             }
         } else {
