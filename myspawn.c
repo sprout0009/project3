@@ -8,7 +8,7 @@ extern char **environ;
 
 int main() {
     pid_t pid;
-    char *argv[] = {"echo", "Hello from the spawned process!", NULL};
+    char *argv[] = {"mkdir", "-p","ok", NULL}; // Changed from example
     int status;
     posix_spawnattr_t attr;
 
@@ -19,7 +19,7 @@ int main() {
     // posix_spawnattr_setflags(&attr, POSIX_SPAWN_SETSCHEDULER);
 
     // Spawn a new process
-    if (posix_spawnp(&pid, "echo", NULL, &attr, argv, environ) != 0) {
+    if (posix_spawnp(&pid, argv[0], NULL, &attr, argv, environ) != 0) { // Changed to argv[0] instead of "echo"
         perror("spawn failed");
         exit(EXIT_FAILURE);
     }

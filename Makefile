@@ -8,3 +8,5 @@ myspawn: myspawn.c
 
 clean:
 	rm -f rsh
+# Clion moment
+all: rsh
